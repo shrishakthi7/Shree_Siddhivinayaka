@@ -45,7 +45,7 @@
   z-index: 2;
   text-align: center;
   padding: 130px 24px 90px;
-  max-width: 920px;
+  max-width: 940px;
   animation: fadeInUp 1.2s ease forwards;
 }
 
@@ -99,7 +99,7 @@
 .hero-title {
   font-family: var(--font-title);
   font-size: clamp(2.6rem, 8vw, 6rem);
-  font-weight: 900;
+  font-weight: 7  00;
   line-height: 1.08;
   margin-bottom: 22px;
   background: linear-gradient(135deg, var(--gold-light) 0%, var(--saffron-light) 50%, var(--gold) 100%);
@@ -144,7 +144,7 @@
   font-size: 0.88rem;
   color: var(--text-muted);
   letter-spacing: 1px;
-  margin-bottom: 44px;
+  margin-bottom: 20px;
 }
 
 /* Buttons */
