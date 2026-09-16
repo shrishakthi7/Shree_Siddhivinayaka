@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  --gold:          #FFD700;
+  --gold-light:    #FFE55C;
+  --gold-dark:     #C8960C;
+  --saffron:       #FF6B00;
+  --saffron-light: #FF9432;
+  --saffron-dark:  #C94D00;
+  --crimson:       #8B0000;
+  --maroon:        #6B0D0D;
+  --cream:         #FFF8E7;
+  --dark-bg:       #0D0500;
+  --dark-card:     #1A0C02;
+  --dark-surface:  #251205;
+  --text-primary:  #FFF8E7;
+  --text-secondary:#FFCC80;
+  --text-muted:    #B07840;
+  --border-glow:   rgba(255,215,0,0.35);
+
+  --font-title:   'Cinzel Decorative', serif;
+  --font-heading: 'Cinzel', serif;
+  --font-body:    'Lato', sans-serif;
+  --font-accent:  'Playfair Display', serif;
+
+  --shadow-gold: 0 0 30px rgba(255,215,0,0.3), 0 0 60px rgba(255,107,0,0.2);
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.6);
+  --radius:    16px;
+  --radius-sm: 8px;
+  --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--dark-bg);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: var(--dark-bg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,var(--gold),var(--saffron));
+  border-radius: 4px;
+}
+
+/* ===== LAYOUT ===== */
+.container { max-width:1200px; margin:0 auto; padding:0 24px; }
+
+/* ===== SECTION HEADER ===== */
+.section-header { text-align:center; margin-bottom:56px; }
+
+.section-divider {
+  display:flex; align-items:center; justify-content:center; gap:16px; margin-bottom:14px;
+}
+.divider-line { height:1px; width:70px; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+.divider-icon { color:var(--gold); font-size:1.3rem; }
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem,4vw,2.8rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg,var(--gold-light),var(--saffron-light),var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-family: var(--font-accent);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  display:inline-flex; align-items:center; gap:10px;
+  background:linear-gradient(135deg,var(--saffron),var(--gold-dark));
+  color:var(--dark-bg);
+  font-family:var(--font-heading); font-size:0.88rem; font-weight:700; letter-spacing:2px;
+  padding:15px 34px; border-radius:50px; border:none; cursor:pointer; text-decoration:none;
+  transition:var(--transition);
+  box-shadow:0 6px 28px rgba(255,107,0,0.5);
+  animation:pulse-glow 3s ease-in-out infinite;
+}
+.btn-primary:hover { transform:translateY(-3px) scale(1.03); box-shadow:0 12px 40px rgba(255,107,0,0.7); }
+
+.btn-secondary {
+  display:inline-flex; align-items:center; gap:10px;
+  background:transparent; color:var(--gold);
+  font-family:var(--font-heading); font-size:0.88rem; font-weight:600; letter-spacing:2px;
+  padding:15px 34px; border-radius:50px; border:1px solid var(--gold);
+  cursor:pointer; text-decoration:none; transition:var(--transition);
+}
+.btn-secondary:hover { background:rgba(255,215,0,0.12); transform:translateY(-3px); }
+
+/* ===== CARD BASE ===== */
+.card {
+  background:linear-gradient(135deg,var(--dark-card),var(--dark-surface));
+  border:1px solid var(--border-glow);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:var(--shadow-card);
+  transition:var(--transition);
+  position:relative;
+  overflow:hidden;
+}
+.card::before {
+  content:'';
+  position:absolute; inset:0;
+  background:radial-gradient(ellipse at top left,rgba(255,215,0,0.05),transparent 60%);
+  pointer-events:none;
+}
+.card:hover { transform:translateY(-6px); border-color:rgba(255,215,0,0.6); box-shadow:var(--shadow-gold); }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp    { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeInDown  { from{opacity:0;transform:translateY(-30px)} to{opacity:1;transform:translateY(0)} }
+@keyframes float       { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes pulse-glow  { 0%,100%{box-shadow:0 0 20px rgba(255,215,0,0.3)} 50%{box-shadow:0 0 50px rgba(255,215,0,0.7),0 0 80px rgba(255,107,0,0.4)} }
+@keyframes shimmer     { 0%{background-position:-200% center} 100%{background-position:200% center} }
+@keyframes rotate-slow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes particle-rise {
+  0%{transform:translateY(0) translateX(0) scale(1); opacity:0.8}
+  100%{transform:translateY(-200px) translateX(var(--drift)) scale(0); opacity:0}
+}
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@keyframes countdown-pulse {
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.04)}
+}
+@keyframes glow-border {
+  0%,100%{border-color:rgba(255,215,0,0.35)}
+  50%{border-color:rgba(255,215,0,0.9)}
+}
+@keyframes day-badge-pop {
+  0%{transform:scale(0.8) rotate(-8deg);opacity:0}
+  100%{transform:scale(1) rotate(-8deg);opacity:1}
+}
+
+.animate-fadeInUp { animation:fadeInUp 0.8s ease forwards; }

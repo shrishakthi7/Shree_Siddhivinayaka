@@ -1,0 +1,22 @@
+.marquee-strip {
+  background: linear-gradient(90deg, var(--saffron-dark), var(--crimson) 50%, var(--saffron-dark));
+  padding: 13px 0;
+  overflow: hidden;
+}
+.marquee-track {
+  display: flex;
+  animation: marquee 28s linear infinite;
+  white-space: nowrap;
+}
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 28px;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  letter-spacing: 3px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+}
+.marquee-star { color: var(--gold); font-size: 1.1rem; }
