@@ -1,11 +1,11 @@
 import './Gallery.css';
 
 const IMAGES = [
-  { src: '/temple_interior.png', alt: 'Shree Siddhivinayaka Idol — beautifully decorated', large: true },
+  { src: '/ganesha.png', alt: 'Shree Siddhivinayaka Idol — beautifully decorated', large: true },
   { src: '/ganesha_hero.png',    alt: 'Lord Ganesha divine portrait',                      large: false },
   { src: '/ganesha_festival.png',alt: 'Festival celebration & procession',                 large: false },
   { src: '/temple_interior.png', alt: 'Sacred sanctum with diyas',                         large: false },
-  { src: '/ganesha_festival.png',alt: 'Community gathering — Ganesh Chaturthi',            large: false },
+  { src: '/ganesha3.png',alt: 'Community gathering — Ganesh Chaturthi',            large: false },
 ];
 
 export default function Gallery() {

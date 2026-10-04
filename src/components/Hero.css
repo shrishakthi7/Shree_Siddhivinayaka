@@ -15,8 +15,8 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  filter: brightness(0.3);
-  transform: scale(1.05);
+  filter: brightness(0.7);
+  transform: scale(1.05)
 }
 
 .hero-overlay {

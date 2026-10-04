@@ -15,7 +15,7 @@ export default function About() {
           {/* Image Side */}
           <div className="about-image-wrapper">
             <img
-              src="/temple_interior.png"
+              src="/ganesha2.png"
               alt="Shree Siddhivinayaka Ganesh idol"
               className="about-image"
             />
