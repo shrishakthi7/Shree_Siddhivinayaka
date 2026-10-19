@@ -36,7 +36,7 @@ export default function Hero() {
       {/* Content */}
       <div className="hero-content">
         <span className="hero-om" aria-label="Om">🕉️</span>
-        <span className="hero-eyebrow">3rd Year of Ganesh Chaturthi Celebration (2026)</span>
+        <span className="hero-eyebrow">3 years of Ganesh Chaturthi Celebration</span>
 
         <h1 className="hero-title">
           Shree<br />Siddhivinayaka
@@ -46,9 +46,9 @@ export default function Hero() {
           "Vighnaharta — Remover of Obstacles, Bestower of Wisdom &amp; Prosperity"
         </p>
 
-        <div className="hero-dates">
-          📅&nbsp;&nbsp;September 14 – 17, 2026&nbsp;&nbsp;·&nbsp;&nbsp;4-Day Grand Celebration
-        </div>
+        {/* <div className="hero-dates">
+          Celebration ongoing
+        </div> */}
 
         <div className="hero-location">
           📍&nbsp;Malleshwara Badavane, Hiriyur, Chithradurg — Karnataka

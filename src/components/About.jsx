@@ -1,7 +1,7 @@
 import './About.css';
 
 const STATS = [
-  { number: '3rd',   label: 'Year Celebrating' },
+  { number: '3',   label: 'Years Celebrating' },
   { number: '100+', label: 'Families Joining' },
   { number: '∞',   label: 'Bappa\'s Blessings' },
 ];

@@ -12,7 +12,7 @@ const EVENT_INFO = [
   '📍 Malleshwara Badavane',
   '🏘️ Hiriyur, Chithradurg',
   '🕐 7 AM – 9 PM Daily',
-  '🎊 3rd Year Celebration',
+  '🎊 3 years Celebration',
   '💛 All Are Welcome',
 ];
 
@@ -33,7 +33,7 @@ export default function Footer() {
               <img src="/siddhi_logo.png" alt="Shree Siddhivinayaka Mandala Logo" />
               <div>
                 <div className="footer-brand-name">Shree Siddhivinayaka</div>
-                <div className="footer-brand-sub">3rd Year Celebration</div>
+                <div className="footer-brand-sub">3 years Celebration</div>
               </div>
             </div>
             <p className="footer-tagline">
@@ -92,7 +92,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="footer-bottom">
-          <p>© 2026 Shree Siddhivinayaka Ganesh Chaturthi (3rd Year) · Malleshwara Badavane, Hiriyur, Chithradurg</p>
+          <p>© 2026 Shree Siddhivinayaka Ganesh Chaturthi (3 years) · Malleshwara Badavane, Hiriyur, Chithradurg</p>
           <p>Made with <span>❤️</span> &amp; <span>🙏</span> for our Community</p>
         </div>
       </div>
